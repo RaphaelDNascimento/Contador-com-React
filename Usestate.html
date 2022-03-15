@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React para iniciantes</title>
+</head>
+<body>
+    <div id="app"></div>
+
+
+
+
+    <script type="text/babel">
+        document.body.style.fontFamily='arial'
+        const Compras = () =>{
+            const [contador,setContador] = React.useState(0)
+            
+
+            let Buy =() =>{
+                setContador(1 +contador)
+                
+                
+            }
+            
+            return (<div>
+                
+                <button onClick={Buy}> Comprar</button>
+                <p>Total: {contador}</p>
+                <p>Valor: R$ {contador2 * 169.25}</p> 
+                </div>)
+            
+        }
+
+        
+        
+        ReactDOM.render(<Compras/>,document.getElementById('app'))
+
+    </script>
+</body>
+</html>
